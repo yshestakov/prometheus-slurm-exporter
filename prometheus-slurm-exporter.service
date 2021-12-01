@@ -1,0 +1,12 @@
+# vim:syntax=systemd
+# /etc/systemd/system/prometheus-slurm-exporter.service
+[Unit]
+Description=Prometheus SLURM Exporter
+
+[Service]
+ExecStart=/usr/local/bin/prometheus-slurm-exporter
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

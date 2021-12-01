@@ -171,6 +171,18 @@ visualize the exported metrics through [Grafana](https://grafana.com):
 
 ![SLURM Scheduler Information](images/Scheduler_Info.png)
 
+## Build on Ubuntu 20.04
+
+```
+$ sudo apt -y install golang-github-prometheus-common-dev \
+  golang-github-prometheus-client-golang-dev \
+  golang-github-prometheus-client-model-dev
+
+$ export GOPATH=/usr/share/gocode/
+$ make
+$ file bin/prometheus-slurm-exporter
+bin/prometheus-slurm-exporter: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, Go BuildID=fyzZ5Dj6pkOJhwjcSC9s/QNXUacJgujzn1rnAg7jc/GlHUm54ID8IqBsUVhQl9/T3wxSBHeUPNLJUfDypDv, not stripped
+```
 
 ## License
 
